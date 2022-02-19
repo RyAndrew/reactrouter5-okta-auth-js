@@ -2,6 +2,9 @@
   "name": "create-react-app-okta-app-reactrouter-v5",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "16.x"
+  },
   "dependencies": {
     "@okta/okta-auth-js": "^6.1.0",
     "@okta/okta-react": "^6.4.2",
