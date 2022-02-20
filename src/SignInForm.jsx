@@ -35,20 +35,21 @@ const SignInForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
+      <p>Login with Okta user</p>
       <label>
         Username:
         <input
           id="username" type="text"
           value={username}
           onChange={handleUsernameChange} />
-      </label>
+      </label><br/>
       <label>
         Password:
         <input
           id="password" type="password"
           value={password}
           onChange={handlePasswordChange} />
-      </label>
+      </label><br/>
       <input id="submit" type="submit" value="Submit" />
     </form>
   );

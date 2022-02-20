@@ -13,13 +13,21 @@ const AppWithRouterAccess = () => {
   };
 
   const oktaAuth = new OktaAuth({
-    issuer: 'https://yourOktaDomain.okta.com/oauth2/default',
-    clientId: 'aaaaabbbbbcccccddddd',
-    redirectUri: window.location.origin + '/login/callback',
+    issuer: 'https://supersecuredev.okta.com/oauth2/default',
+    clientId: '0oah6bhgvJLRNr56x696',
+    redirectUri: 'https://reactrouter5-okta-auth-js.glitch.me/login/callback',
     onAuthRequired: onAuthRequired,
-    pkce: true
+    pkce: true,
+    idpDiscovery: true
   });
-
+  
+  // onAuthRequired={customAuthHandler}
+  //const customAuthHandler = (oktaAuth) => {
+  //  // Redirect to the /login page that has a CustomLoginComponent
+  //  // This example is specific to React-Router
+  //  history.push('/login');
+  //};
+  
   const restoreOriginalUri = async (_oktaAuth, originalUri) => {
     history.replace(toRelativeUrl(originalUri, window.location.origin));
   };
