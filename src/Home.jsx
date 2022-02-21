@@ -19,14 +19,24 @@ const Home = () => {
   }
 
   
-  let button, name;
+  let button, name, loginDemoUserCreds;
   
   if(authState.isAuthenticated){
     name = 'Logged In As '+authState.idToken.claims.name;
     button = <button onClick={() => {oktaAuth.signOut()}}>Logout</button>;
+    loginDemoUserCreds = '';
   }else{
     name = '';
     button =  <div><button onClick={() => {history.push('/login')}}>Login via Form</button> <button onClick={loginViaRedirect}>Login via Redirect</button></div>;
+    loginDemoUserCreds = (<p>Login with:
+      Okta User:<br/>
+        test@test.com<br/>
+        <br/>
+      Azure AD Federated User:<br/>
+      fred@aad.supersecure.xyz<br/>
+        <br/>
+        Password:<br/>
+        Secret123$</p>);
   }
 
   return (
@@ -34,7 +44,9 @@ const Home = () => {
       <p>{name}</p>
       <p>{button}</p>
       <Link to='/'>Home</Link><br/>
-      <Link to='/protected'>Protected</Link><br/>
+      <Link to='/protected'>Protected</Link> (Requires Login)<br/>
+      <br/>
+      {loginDemoUserCreds}
     </div>
   );
 };
