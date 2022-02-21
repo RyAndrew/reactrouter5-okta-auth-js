@@ -8,7 +8,7 @@ const Home = () => {
   
   let loginViaRedirect = function(){
     let tokenParams = {
-      scopes: ['openid', 'email', 'profile'], //, 'https://graph.microsoft.com/User.Read'
+      scopes: ['openid', 'email', 'profile'],
     }
     oktaAuth.token.getWithRedirect(tokenParams);
   }
