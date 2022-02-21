@@ -30,6 +30,9 @@ const SignInForm = () => {
     });
   };
   
+  //when login form is submitted, run webfinger first to check if external idp is used
+  // if external idp is used, we must redirect
+  // if okta is idp then we can validate credentials directly
   const handleSubmit = (event) => {
     event.preventDefault();
 
