@@ -41,6 +41,7 @@ const Home = () => {
 
   return (
     <div>
+      <h2>Home</h2>
       <p>{name}</p>
       <p>{button}</p>
       <Link to='/'>Home</Link><br/>
