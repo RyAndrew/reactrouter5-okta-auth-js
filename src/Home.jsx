@@ -48,6 +48,13 @@ const Home = () => {
       <Link to='/protected'>Protected</Link> (Requires Login)<br/>
       <br/>
       {loginDemoUserCreds}
+      <a target="_top" href="https://glitch.com/edit/#!/remix/reactrouter5-okta-auth-js">
+        <img
+          src="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FLogo_Color.svg?v=1618199565140"
+          alt=""
+        />
+        Remix This App on Glitch
+      </a>
     </div>
   );
 };
