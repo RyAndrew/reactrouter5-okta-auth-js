@@ -1,0 +1,9 @@
+{
+  "name": "React Router 5 Auth JS Example",
+  "description": "Using the low level authjs library from okta and react router v5",
+  "url": "https://reactrouter5-okta-auth-js.glitch.me/",
+  "logo": "https://developer.okta.com/logo.png",
+  "categories": [
+    "authentication"
+  ]
+}
